@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Labs ppt 2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <!-- script.js en bas de la page html -->
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div style="text-align:center;"><h1>Event Manager</h1></div>
+    <div class="col-lg-4">
+      <form class="form-horizontal">
+        <fieldset>
+          <!-- Form Name -->
+          <legend>Event</legend>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="event-name">Name</label>
+            <div class="col-md-5">
+              <input id="event-name"
+                     name="event-name"
+                     type="text"
+                     placeholder="Event Name"
+                     class="form-control input-md"
+                     required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="start-date">Start date</label>
+            <div class="col-md-5">
+              <input type="date"
+                     name="start-date"
+                     id="start-date"
+                     required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="end-date">End date</label>
+            <div class="col-md-5">
+              <input type="date"
+                     name="end-date"
+                     id="end-date"
+                     required>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <!-- Form Name -->
+          <legend>Location</legend>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="street-name">Street Name</label>
+            <div class="col-md-5">
+              <input id="street-name"
+                     name="street-name"
+                     type="text"
+                     placeholder="Street Name"
+                     ng-model="newEvent.location.streetAddress"
+                     class="form-control input-md" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="postal-code">Zip code</label>
+            <div class="col-md-5">
+              <input id="postal-code"
+                     name="postal-code"
+                     type="text"
+                     placeholder="postal code"
+                     class="form-control input-md"
+                     ng-model="newEvent.location.postalCode"
+                     required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="city-name">City Name</label>
+            <div class="col-md-5">
+              <input
+                id="city-name"
+                name="city-name"
+                type="text"
+                placeholder="City Name"
+                class="form-control input-md"
+                required>
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-default" id="submit-btn">Add Event</button>
+      </form>
+    </div>
+    <!-- On injecte dans la div#result les données en provenance sur formulaire -->
+    <div class="col-lg-4">
+      <div id="result"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
