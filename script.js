@@ -10,7 +10,7 @@ $( "form" ).submit(function(event) {
   var cityName = $('#city-name').val();
 
   $('#result').append(
-    '<article itemscope itemtype="http://schema.org/Event" role="dialog" class="row">'+
+    '<div itemscope itemtype="http://schema.org/Event" role="dialog" class="row">'+
     '<header>'+
     '<h1 class="event-title" itemprop="name" aria-label="event name" id="name">'+eventName+'</h1>'+
     '<span class="event-date" itemprop="startDate" id="startDate" aria-label="event star date">'+startDate+'</span><br>'+
@@ -22,7 +22,7 @@ $( "form" ).submit(function(event) {
     '<span itemprop="postalCode" id="postalCode" aria-label="event location - postal code">'+postalCode+'</span><br>'+
     '<span itemprop="addressLocality" id="addressLocality" aria-label="event location - city name">'+cityName+'</span>'+
     '</div>'+
-    '</address>'+
+    '</div>'+
     '</article>'
   );
 });
